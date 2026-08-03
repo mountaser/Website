@@ -1,6 +1,6 @@
 # MountaserHalak.com
 
-Personal portfolio website of **Mohamad Mountaser Halak**: Systemadministration, Netzwerktechnik & DevOps. Built as a static, dependency-free one-page site and self-hosted on a home lab server.
+Personal portfolio website of **Mountaser Halak**: Systemadministration, IT-Support & Netzwerktechnik. Built as a static, dependency-free one-page site and self-hosted on a home lab server.
 
 🔗 [www.mountaserhalak.com](https://www.mountaserhalak.com/)
 

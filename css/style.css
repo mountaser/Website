@@ -197,6 +197,13 @@ a { color: var(--accent); text-decoration: none; cursor: pointer; }
 
 /* Projects */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+/* Wide card fills the final row so the grid never ends on a lone item. */
+.project-wide { grid-column: 1 / -1; }
+@media (min-width: 900px) {
+  .project-wide { display: grid; grid-template-columns: 64px 1fr; column-gap: 18px; align-items: start; }
+  .project-wide .project-icon { grid-row: 1 / span 3; margin-bottom: 0; }
+  .project-wide h3, .project-wide p, .project-wide .tags { grid-column: 2; }
+}
 .project-logo, .project-icon {
   width: 64px; height: 64px; border-radius: 16px; margin-bottom: 14px;
   background: linear-gradient(150deg, var(--navy), var(--accent));
