@@ -4,6 +4,13 @@ Personal portfolio website of **Mountaser Halak**: Systemadministration, IT-Supp
 
 🔗 [www.mountaserhalak.com](https://www.mountaserhalak.com/)
 
+## Tools & Technologies
+
+- **Frontend Core**: HTML5 (semantic markup, inline SVG icons), CSS3 (CSS Grid, Flexbox, CSS variables, sticky navigation, smooth scrolling), Vanilla JavaScript (ES6+, DOM API, `IntersectionObserver`).
+- **Frameworks & Libraries**: **None (Zero dependencies / Framework-free)**. Built entirely without external JavaScript libraries or CSS frameworks.
+- **Typography & GDPR**: Self-hosted **Inter Variable Font** (`.woff2`, SIL Open Font License 1.1) to ensure zero third-party IP requests (GDPR compliant).
+- **Hosting & Infrastructure**: Self-hosted on a home lab server running **Unraid OS**, containerized via **Docker**, and proxied through **Nginx Reverse Proxy** with SSL/TLS encryption.
+
 ## Features
 
 - **Single-page portfolio**: hero, about, IT skills, work experience & education timelines, project showcase, and contact section, all navigable via a sticky header with smooth-scroll anchor links.
