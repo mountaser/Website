@@ -38,7 +38,8 @@
   (function initLanguage() {
     var STORAGE_KEY = 'preferred_lang';
     var path = window.location.pathname;
-    var isEnPage = path.indexOf('/en/') !== -1 || path.substr(-3) === '/en' || path.substr(-7) === '/en/';
+    var isFileProtocol = window.location.protocol === 'file:';
+    var isEnPage = path.indexOf('/en/') !== -1 || path.substr(-8) === '/en/index.html' || path.substr(-3) === '/en';
 
     // Listen for manual language switcher clicks to save preference
     var langLinks = document.querySelectorAll('.lang-switcher a[data-lang]');
@@ -49,15 +50,18 @@
       });
     }
 
+    // Do not auto-redirect when opening local files directly via file:// protocol
+    if (isFileProtocol) return;
+
     // Auto-detect and redirect on first visit or based on saved preference
     try {
       var savedLang = localStorage.getItem(STORAGE_KEY);
       if (savedLang === 'en' && !isEnPage) {
-        window.location.href = 'en/';
+        window.location.href = 'en/index.html';
         return;
       }
       if (savedLang === 'de' && isEnPage) {
-        window.location.href = '../';
+        window.location.href = '../index.html';
         return;
       }
       if (!savedLang) {
@@ -65,7 +69,7 @@
         var primaryLang = (userLangs[0] || '').toLowerCase();
         var isGerman = primaryLang.indexOf('de') === 0;
         if (!isGerman && !isEnPage) {
-          window.location.href = 'en/';
+          window.location.href = 'en/index.html';
         }
       }
     } catch (e) {
