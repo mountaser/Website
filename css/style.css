@@ -79,6 +79,19 @@ a { color: var(--accent); text-decoration: none; cursor: pointer; }
   background: var(--navy); color: #fff; margin-left: 6px;
 }
 .nav nav a.nav-cta:hover { background: var(--accent); }
+.lang-switcher {
+  display: inline-flex; align-items: center; gap: 3px; margin-left: 8px; font-size: 0.85rem; font-weight: 600;
+  border-left: 1px solid var(--line); padding-left: 10px;
+}
+.lang-switcher a {
+  padding: 4px 7px !important; border-radius: 6px !important; color: var(--slate) !important; text-decoration: none;
+}
+.lang-switcher a.active {
+  color: var(--navy) !important; background: #e2e8f0; font-weight: 700;
+}
+.lang-switcher a:hover {
+  color: var(--navy) !important; background: #eef2f7;
+}
 .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 10px; }
 .nav-toggle span {
   display: block; width: 22px; height: 2px; background: var(--navy);
